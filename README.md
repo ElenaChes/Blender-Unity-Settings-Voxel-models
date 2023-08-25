@@ -7,11 +7,11 @@ Description: streamlines optimising MagicaVoxel models to be used in Unity, can 
 # Dependencies
 
 The add-on relies on two existing add-ons and won't work without having them installed in advance:
-1. VoxCleaner v1 by Farhan Shaikh - [Github repo](https://github.com/TheStrokeForge/Vox-Cleaner)
-2. Texel Density Checker v3.3.1 by Ivan Vostrikov - [Addon page](https://mrven.gumroad.com/l/CEIOR)
+1. VoxCleaner v1 by Farhan Shaikh - [Github repo](https://github.com/TheStrokeForge/Vox-Cleaner).
+2. Texel Density Checker v3.3.1 by Ivan Vostrikov - [Addon page](https://mrven.gumroad.com/l/CEIOR).
 
 It could work with different versions, but these are the ones that were tested.<br>
-You can read how to install Blender add-ons [here](https://docs.blender.org/manual/en/latest/editors/preferences/addons.html) or find another guide online.
+> You can read how to install Blender add-ons [here](https://docs.blender.org/manual/en/latest/editors/preferences/addons.html) or find another guide online.
 
 # Installation
 
@@ -50,7 +50,7 @@ Notes:
   - `Set To Pixels` - snaps islands on Texture to fit pixels.
   - `Bake Texture` - uses VoxCleaner's `Bake Texture`.
   - `Pretty Polygons` - traingulates the polygons so they're more effecient in Unity.
-- There is generally no real reason to go step by step here and it's best to `Smart Process` instead.
+> There is generally no real reason to go step by step here and it's best to `Smart Process` instead.
 
 ## Level Of Detail
 - `Decimate` - how much to reduce the face count of the mesh.
