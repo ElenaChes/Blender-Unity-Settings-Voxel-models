@@ -3,7 +3,23 @@
 A Blender add-on for Voxel 3D models.<br>
 Description: streamlines optimising MagicaVoxel models to be used in Unity, can also create low level-of-detail version of models.<br>
 
-> The default parameters that my team found fit Unity best will be included in the attached image.
+> [!NOTE]
+> The default parameters that my team found fit Unity best will be included in the attached images.
+
+<details>
+  <summary><h3>Content</h3></summary>
+
+- [Dependencies](#dependencies)
+- [Installation](#installation)
+- [Panels](#panels)
+  - [Model Settings](#model-settings)
+  - [Quick Export](#quick-export)
+  - [Process Model](#process-model)
+  - [Level Of Detail](#level-of-detail)
+- [Usage](#usage)
+
+</details>
+<hr>
 
 # Dependencies
 
@@ -14,6 +30,7 @@ The add-on relies on two existing add-ons and won't work without having them ins
 
 It could work with different versions, but these are the ones that were tested.<br>
 
+> [!TIP]
 > You can read how to install Blender add-ons [here](https://docs.blender.org/manual/en/latest/editors/preferences/addons.html) or find another guide online.
 
 # Installation
@@ -43,10 +60,14 @@ It could work with different versions, but these are the ones that were tested.<
 - `Flip Z axis` and `Scale` - will auto select these parameters when exporting.
 - `Model Path` - location for the Obj to export to. (Will also be used for low LOD version if created)
 
-Notes:
+> [!CAUTION]
+> If `Auto Export` is unselected, the "path" inputs will be replaced with manual `Export` buttons. Remember to export both the Texture and Obj after you're done processing!
 
-- If `Auto Export` is unselected, the "path" inputs will be replaced with manual `Export` buttons. Remember to export both the Texture and Obj after you're done processing!
-- If a low LOD model was processed, the Obj panel will update to reflect that.
+<img align="right" src="https://github.com/ElenaChes/Blender-Unity-Settings-Voxel-models/assets/54331769/3fcddf60-f5f3-4735-8b52-6a4aeaefe7c6">
+<img align="right" src="https://github.com/ElenaChes/Blender-Unity-Settings-Voxel-models/assets/54331769/292dde53-5991-48d8-a19b-88d69fed1281">
+
+> [!NOTE]
+> If a low LOD model was processed, the Obj panel will update to reflect that.
 
 ## Process Model
 
@@ -57,18 +78,19 @@ Notes:
 - `Use smart process` (recommended) - whether to condence all processing steps into a single button click.
 - `Smart Process` - runs 7 steps to process the MagicaVoxel (or other voxel art) model and optimise it for using in Unity.
 
-Notes:
+> [!NOTE]
+> If `Use smart process` is unselected you will be able to go step by step:
+>
+> - `Start Process` - removes all objects except selected.
+> - `Prepare For UV` - uses VoxCleaner's `Prepare For UV`.
+> - `Pack Islands` - cubes projections and packs islands.
+> - `Update TD` - uses Texel Density Checker's `Set My TD`.
+> - `Set To Pixels` - snaps islands on Texture to fit pixels.
+> - `Bake Texture` - uses VoxCleaner's `Bake Texture`.
+> - `Pretty Polygons` - traingulates the polygons so they're more effecient in Unity.
 
-- If `Use smart process` is unselected you will be able to go step by step:
-  - `Start Process` - removes all objects except selected.
-  - `Prepare For UV` - uses VoxCleaner's `Prepare For UV`.
-  - `Pack Islands` - cubes projections and packs islands.
-  - `Update TD` - uses Texel Density Checker's `Set My TD`.
-  - `Set To Pixels` - snaps islands on Texture to fit pixels.
-  - `Bake Texture` - uses VoxCleaner's `Bake Texture`.
-  - `Pretty Polygons` - traingulates the polygons so they're more effecient in Unity.
-
-> There is generally no real reason to go step by step here and it's best to `Smart Process` instead.
+> [!TIP]
+> There is generally no reason in regular usage to go step by step here and it's best to `Smart Process` instead.
 
 ## Level Of Detail
 
@@ -77,6 +99,7 @@ Notes:
 - `Decimate` - how much to reduce the face count of the mesh.
 - `Process` - decimates the model and creates a low level-of-detail model instead.
 
+> [!IMPORTANT]
 > In order to create a low LOD version you need to process the model first.
 
 # Usage
@@ -89,4 +112,5 @@ Notes:
 6. Confirm saving in the window that opens.
 7. If also creating a low LOD verision click `Process` in the `Level of Detail` panel and confirm saving as well.
 
+> [!NOTE]
 > This is the recommended usage but you can choose to do the process manually if you wish to.
